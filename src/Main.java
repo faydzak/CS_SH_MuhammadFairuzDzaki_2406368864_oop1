@@ -1,15 +1,15 @@
-// Save this as Main.java (single file version)
+
 import java.util.Scanner;
 
 public class Main {
-    // Enum for vehicle types
+
     enum VehicleType {
         CAR,
         MOTORCYCLE,
         TRUCK
     }
 
-    // Vehicle class (nested static class)
+
     static class Vehicle {
         private String brand;
         private int year;
@@ -47,7 +47,7 @@ public class Main {
         }
     }
 
-    // Customer class (nested static class)
+
     static class Customer {
         private String name;
         private Vehicle vehicle;
@@ -69,17 +69,17 @@ public class Main {
         }
     }
 
-    // Main method
+
     public static void main(String[] args) {
-        // Create vehicles
+
         Vehicle vehicleSupraBapak = new Vehicle("Honda Supra", 1998, VehicleType.MOTORCYCLE, 3000.0);
         Vehicle vehicleKalcer = new Vehicle("VW Beetle", 1998, VehicleType.CAR, 200000.0);
         Vehicle vehicleGuede = new Vehicle("Isuzu Giga", 2011, VehicleType.TRUCK, 300000.0);
 
-        // Create scanner for input
+
         Scanner scanner = new Scanner(System.in);
 
-        // Get customer names
+
         System.out.println("Enter customer names:");
         System.out.print("Enter customer 1 name: ");
         String name1 = scanner.nextLine();
@@ -88,12 +88,12 @@ public class Main {
         System.out.print("Enter customer 3 name: ");
         String name3 = scanner.nextLine();
 
-        // Create customer objects with vehicles
+
         Customer customer1 = new Customer(name1, vehicleSupraBapak);
         Customer customer2 = new Customer(name2, vehicleKalcer);
         Customer customer3 = new Customer(name3, vehicleGuede);
 
-        // Display customer details
+
         System.out.println("\n====== Customer Service ======");
         System.out.println("Customer 1:");
         customer1.showDetails();
